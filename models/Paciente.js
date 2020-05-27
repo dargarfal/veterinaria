@@ -15,11 +15,11 @@ const pacientesSchema = new Schema({
     trim: true
   },
   hora: {
-    ype: String,
+    type: String,
     trim: true
   },
   sintomas: {
-    ype: String,
+    type: String,
     trim: true
   }
 

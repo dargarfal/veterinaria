@@ -1,8 +1,17 @@
 const express = require('express');
 require('dotenv').config();
 const mongoose = require('mongoose');
+const routes = require('./routes');
+const bodyParser = require('body-parser');
 
 const app = express();
+
+//habilitar body-parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+//habilando routes
+app.use('/', routes());
 
 //Conextar a MongoDb
 mongoose.Promise = global.Promise;

@@ -1,0 +1,31 @@
+POST http://localhost:4000/pacientes
+Content-Type: application/json
+
+{
+  "nombre": "Hook",
+  "propietario": "Ernesto",
+  "fecha": "2020-06-01",
+  "hora": "10:00",
+  "sintomas": "Mareos"
+}
+
+###
+GET http://localhost:4000/pacientes
+
+###
+GET http://localhost:4000/pacientes/5ecccae75763a0fa8d8e391d
+
+###
+DELETE http://localhost:4000/pacientes/5ecdc2eb0076672d02d6f706
+
+###
+PUT http://localhost:4000/pacientes/5ecccb405763a0fa8d8e391e
+Content-Type: application/json
+
+{
+  "nombre": "Chuchita",
+  "propietario": "Alexa",
+  "fecha": "2020-06-01",
+  "hora": "09:30",
+  "sintomas": "Dolor de cabeza"
+}
