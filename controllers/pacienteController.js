@@ -3,8 +3,6 @@ const Paciente = require('../models/Paciente');
 //Cuando se crea un nuevo cliente
 
 exports.nuevoCliente = async (req, res, next) => {
-  //TODO: insertar en la DB
-  //console.log(req.body);
   //Crear objeto de pacientes
   const paciente = new Paciente(req.body);
 

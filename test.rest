@@ -29,3 +29,16 @@ Content-Type: application/json
   "hora": "09:30",
   "sintomas": "Dolor de cabeza"
 }
+
+###
+PUT http://localhost:4000/usuarios/5ed34546470f8a1cfabd83fb
+Content-Type: application/json
+
+{
+  "nombreRealUsario": "Ernesto Darge",
+  "emailUsuario": "dargarfal@gmail.com",
+  "passUsuario": "cubasoltravel.com",
+  "fotoUsario": "./public/img/usuarios/ernest.jpg",
+  "creadoUsuario": "2020-05-31",
+  "rolUsuario": "administrador"
+}
