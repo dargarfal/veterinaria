@@ -3,6 +3,7 @@ const Usuario = require('../models/Usuario');
 //Crear un nuevo usuario
 exports.nuevoUsuario = async (req, res, next) => {
 
+  
   const usuario = new Usuario(req.body);
   
   try {

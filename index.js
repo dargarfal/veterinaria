@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const routes = require('./routes');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const CONFIG = require('./config/config');
 
 const app = express();
 
@@ -34,15 +35,15 @@ app.use('/', routes());
 
 //Conextar a MongoDb
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/veterinaria', {
+mongoose.connect(CONFIG.DB, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false
 });
 
 
-const HOST = process.env.HOST || '0.0.0.0';
-const PORT = process.env.PORT || 4000; //Traemos el puerto desde el fichero ".env"
-app.listen(PORT, HOST, () => {
-  console.log(`Servidor escuchando en puerto ${PORT}`);
+//const HOST = process.env.HOST || '0.0.0.0';
+//const PORT = process.env.PORT || 4000; //Traemos el puerto desde el fichero ".env"
+app.listen(CONFIG.PORT, CONFIG.HOST, () => {
+  console.log(`Servidor escuchando en puerto ${CONFIG.PORT}`);
 });

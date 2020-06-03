@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const  pacienteController = require('../controllers/pacienteController');
 const usuarioController = require('../controllers/usarioController');
+const loginController = require('../controllers/loginController');
 
 module.exports = function(){
 
@@ -25,6 +26,8 @@ module.exports = function(){
   router.put('/usuarios/:id', usuarioController.updateUsuario);
 
   router.delete('/usuarios/:id', usuarioController.deleteUsuario);
+
+  router.post('/login', loginController.loginUsuario);
   
   return router;
 }

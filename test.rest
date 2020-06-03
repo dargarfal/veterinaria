@@ -42,3 +42,15 @@ Content-Type: application/json
   "creadoUsuario": "2020-05-31",
   "rolUsuario": "administrador"
 }
+
+###
+POST http://localhost:4000/usuarios
+Content-Type: application/json
+
+{
+  "nombreRealUsario": "Graciela Falcon",
+  "emailUsuario": "graciela@gmail.com",
+  "passUsuario": "123",
+  "fotoUsario": "./public/img/usuarios/graciela.jpg",
+  "rolUsuario": "administrador"
+}
